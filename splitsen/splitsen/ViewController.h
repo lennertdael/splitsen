@@ -10,4 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property(nonatomic, strong) UIView *viewA;
+
+@property(nonatomic, strong) UIView *viewB;
+
 @end
