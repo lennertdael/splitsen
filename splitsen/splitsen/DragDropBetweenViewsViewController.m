@@ -6,10 +6,10 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "DragDropBetweenViewsViewController.h"
 #import "DragDropManager.h"
 
-@implementation ViewController
+@implementation DragDropBetweenViewsViewController
 
 
 @synthesize viewA = _viewA;
@@ -28,18 +28,18 @@
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
+
     // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
 
 /*
- // Implement loadView to create a view hierarchy programmatically, without using a nib.
- - (void)loadView
- {
- }
- */
+// Implement loadView to create a view hierarchy programmatically, without using a nib.
+- (void)loadView
+{
+}
+*/
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -50,11 +50,11 @@
     _viewB = [[UIView alloc] initWithFrame:CGRectMake(0, 220, 320, 200)];
     [_viewB setBackgroundColor:[UIColor yellowColor]];
     _viewB.tag = 2;
-    
+
     [[self view] addSubview:_viewA];
     [[self view] addSubview:_viewB];
     //[[self view] addSubview:_viewB];
-    
+
     //add elements to drag and drop
     UIView *dragDropView1 = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 50, 50)];
     UIView *dragDropView2 = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 50, 50)];
@@ -62,16 +62,12 @@
     [_viewB addSubview:dragDropView2];
     [dragDropView1 setBackgroundColor:[UIColor redColor]];
     [dragDropView2 setBackgroundColor:[UIColor blueColor]];
-    
     NSMutableArray *draggableSubjects = [[NSMutableArray alloc] initWithObjects:dragDropView1, dragDropView2, nil];
     NSMutableArray *droppableAreas = [[NSMutableArray alloc] initWithObjects:_viewA, _viewB, nil];
     _dragDropManager = [[DragDropManager alloc] initWithDragSubjects:draggableSubjects andDropAreas:droppableAreas];
-    
-    UIPanGestureRecognizer * uiTapGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:_dragDropManager action:@selector(dragging:)];
-    
-    //[[self.view] addGestureRecognizer:uiTapGestureRecognizer];
-    [self.view addGestureRecognizer:uiTapGestureRecognizer];
 
+    UIPanGestureRecognizer * uiTapGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:_dragDropManager action:@selector(dragging:)];
+    [[self view] addGestureRecognizer:uiTapGestureRecognizer];
 }
 
 - (void)viewDidUnload {

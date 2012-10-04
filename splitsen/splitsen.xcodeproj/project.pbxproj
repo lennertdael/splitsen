@@ -15,6 +15,9 @@
 		5BD831AE161B7DD5004F575F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD831AD161B7DD5004F575F /* AppDelegate.m */; };
 		5BD831B1161B7DD5004F575F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD831B0161B7DD5004F575F /* ViewController.m */; };
 		5BD831B4161B7DD5004F575F /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BD831B2161B7DD5004F575F /* ViewController.xib */; };
+		5BD831C4161B81E1004F575F /* DragContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD831C1161B81E1004F575F /* DragContext.m */; };
+		5BD831C5161B81E1004F575F /* DragDropManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD831C3161B81E1004F575F /* DragDropManager.m */; };
+		5BD831C8161B857D004F575F /* DragDropBetweenViewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD831C7161B857D004F575F /* DragDropBetweenViewsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,12 @@
 		5BD831AF161B7DD5004F575F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5BD831B0161B7DD5004F575F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5BD831B3161B7DD5004F575F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		5BD831C0161B81E1004F575F /* DragContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragContext.h; sourceTree = "<group>"; };
+		5BD831C1161B81E1004F575F /* DragContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragContext.m; sourceTree = "<group>"; };
+		5BD831C2161B81E1004F575F /* DragDropManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDropManager.h; sourceTree = "<group>"; };
+		5BD831C3161B81E1004F575F /* DragDropManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragDropManager.m; sourceTree = "<group>"; };
+		5BD831C6161B857D004F575F /* DragDropBetweenViewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDropBetweenViewsViewController.h; sourceTree = "<group>"; };
+		5BD831C7161B857D004F575F /* DragDropBetweenViewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragDropBetweenViewsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +86,12 @@
 		5BD831A3161B7DD5004F575F /* splitsen */ = {
 			isa = PBXGroup;
 			children = (
+				5BD831C6161B857D004F575F /* DragDropBetweenViewsViewController.h */,
+				5BD831C7161B857D004F575F /* DragDropBetweenViewsViewController.m */,
+				5BD831C0161B81E1004F575F /* DragContext.h */,
+				5BD831C1161B81E1004F575F /* DragContext.m */,
+				5BD831C2161B81E1004F575F /* DragDropManager.h */,
+				5BD831C3161B81E1004F575F /* DragDropManager.m */,
 				5BD831AC161B7DD5004F575F /* AppDelegate.h */,
 				5BD831AD161B7DD5004F575F /* AppDelegate.m */,
 				5BD831AF161B7DD5004F575F /* ViewController.h */,
@@ -164,6 +179,9 @@
 				5BD831AA161B7DD5004F575F /* main.m in Sources */,
 				5BD831AE161B7DD5004F575F /* AppDelegate.m in Sources */,
 				5BD831B1161B7DD5004F575F /* ViewController.m in Sources */,
+				5BD831C4161B81E1004F575F /* DragContext.m in Sources */,
+				5BD831C5161B81E1004F575F /* DragDropManager.m in Sources */,
+				5BD831C8161B857D004F575F /* DragDropBetweenViewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +262,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "splitsen/splitsen-Prefix.pch";
 				INFOPLIST_FILE = "splitsen/splitsen-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -255,7 +275,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "splitsen/splitsen-Prefix.pch";
 				INFOPLIST_FILE = "splitsen/splitsen-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -279,6 +301,7 @@
 				5BD831B9161B7DD5004F575F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
