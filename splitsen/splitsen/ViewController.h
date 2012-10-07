@@ -12,12 +12,17 @@
 
 @interface ViewController : UIViewController {
 @private
+    UILabel * _labelQuestion;
     UIView * _viewA;
     UIView * _viewB;
     DragDropManager *_dragDropManager;
 }
+
+@property(nonatomic, retain) UILabel *labelQuestion;
 @property(nonatomic, retain) UIView *viewA;
 @property(nonatomic, retain) UIView *viewB;
 @property(nonatomic, retain) DragDropManager *dragDropManager;
+
+@property (weak, nonatomic) IBOutlet UILabel *labelAnswer;
 
 @end

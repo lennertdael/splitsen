@@ -11,6 +11,7 @@
 
 
 @interface DragDropManager : NSObject
+
 - (id)initWithDragSubjects:(NSArray *)dragSubjects andDropAreas:(NSArray *)dropAreas;
 
 - (void)dragging:(id)sender;

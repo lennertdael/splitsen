@@ -7,7 +7,7 @@
 
 #import "DragDropManager.h"
 #import "DragContext.h"
-
+#import "ViewController.h"
 
 @implementation DragDropManager {
 
@@ -18,7 +18,6 @@
 
 @synthesize dragContext = _dragContext;
 @synthesize dropAreas = _dropAreas;
-
 
 - (id)initWithDragSubjects:(NSArray *)dragSubjects andDropAreas:(NSArray *)dropAreas {
     self = [super init];
@@ -75,6 +74,7 @@
                     CGPoint pointInDropView = [recognizer locationInView:dropArea];
                     NSLog(@"tag %i pointInDropView %@ center of dragged view %@", dropArea.tag, NSStringFromCGPoint(pointInDropView), NSStringFromCGPoint(centerOfDraggedView));
                     if ([dropArea pointInside:pointInDropView withEvent:nil]) {
+                    
                         droppedViewInKnownArea = YES;
                         NSLog(@"dropped subject %@ on to view tag %i", NSStringFromCGRect(viewBeingDragged.frame), dropArea.tag);
                         [viewBeingDragged removeFromSuperview];
